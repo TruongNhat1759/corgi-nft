@@ -1,0 +1,104 @@
+
+Shark.png
+size: 1969,1870
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 2, 679
+  size: 860, 1189
+  orig: 860, 1189
+  offset: 0, 0
+  index: -1
+eye 1
+  rotate: false
+  xy: 2, 37
+  size: 201, 160
+  orig: 203, 162
+  offset: 1, 1
+  index: -1
+eye close
+  rotate: false
+  xy: 1607, 123
+  size: 172, 95
+  orig: 174, 97
+  offset: 1, 1
+  index: -1
+foot R
+  rotate: false
+  xy: 205, 107
+  size: 258, 90
+  orig: 258, 90
+  offset: 0, 0
+  index: -1
+footL
+  rotate: false
+  xy: 1607, 324
+  size: 258, 90
+  orig: 258, 90
+  offset: 0, 0
+  index: -1
+l arm
+  rotate: false
+  xy: 1459, 416
+  size: 508, 493
+  orig: 508, 493
+  offset: 0, 0
+  index: -1
+l leg 2
+  rotate: false
+  xy: 1583, 911
+  size: 366, 394
+  orig: 366, 394
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 864, 533
+  size: 593, 394
+  orig: 593, 394
+  offset: 0, 0
+  index: -1
+r arm 2
+  rotate: false
+  xy: 1583, 1307
+  size: 377, 561
+  orig: 377, 561
+  offset: 0, 0
+  index: -1
+r leg 2
+  rotate: false
+  xy: 1292, 2
+  size: 313, 412
+  orig: 313, 412
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 2, 199
+  size: 758, 478
+  orig: 758, 478
+  offset: 0, 0
+  index: -1
+tail fin
+  rotate: false
+  xy: 1607, 220
+  size: 218, 102
+  orig: 218, 103
+  offset: 0, 1
+  index: -1
+weapon
+  rotate: false
+  xy: 762, 5
+  size: 528, 526
+  orig: 528, 526
+  offset: 0, 0
+  index: -1
+weapon2
+  rotate: false
+  xy: 864, 929
+  size: 717, 939
+  orig: 717, 939
+  offset: 0, 0
+  index: -1

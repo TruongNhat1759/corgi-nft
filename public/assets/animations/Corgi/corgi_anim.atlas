@@ -1,0 +1,153 @@
+
+corgi_anim.png
+size: 2033,848
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L arm
+  rotate: false
+  xy: 519, 122
+  size: 316, 288
+  orig: 316, 288
+  offset: 0, 0
+  index: -1
+L ear
+  rotate: false
+  xy: 1039, 2
+  size: 185, 360
+  orig: 185, 360
+  offset: 0, 0
+  index: -1
+L eye
+  rotate: false
+  xy: 1582, 124
+  size: 92, 97
+  orig: 94, 99
+  offset: 1, 1
+  index: -1
+L eyebrow
+  rotate: false
+  xy: 689, 53
+  size: 57, 67
+  orig: 59, 69
+  offset: 1, 1
+  index: -1
+L feet
+  rotate: false
+  xy: 519, 52
+  size: 168, 68
+  orig: 168, 68
+  offset: 0, 0
+  index: -1
+L leg
+  rotate: false
+  xy: 1475, 223
+  size: 214, 269
+  orig: 214, 269
+  offset: 0, 0
+  index: -1
+R arm
+  rotate: false
+  xy: 1475, 494
+  size: 224, 352
+  orig: 224, 352
+  offset: 0, 0
+  index: -1
+R ear
+  rotate: false
+  xy: 837, 76
+  size: 200, 334
+  orig: 200, 334
+  offset: 0, 0
+  index: -1
+R eye
+  rotate: false
+  xy: 1226, 15
+  size: 124, 97
+  orig: 126, 99
+  offset: 1, 1
+  index: -1
+R eyebrow
+  rotate: false
+  xy: 1352, 36
+  size: 76, 76
+  orig: 78, 78
+  offset: 1, 1
+  index: -1
+R feet
+  rotate: false
+  xy: 1676, 150
+  size: 152, 57
+  orig: 152, 57
+  offset: 0, 0
+  index: -1
+R leg
+  rotate: false
+  xy: 1226, 114
+  size: 243, 248
+  orig: 243, 248
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 1077, 364
+  size: 396, 482
+  orig: 396, 482
+  offset: 0, 0
+  index: -1
+chuoi
+  rotate: false
+  xy: 1471, 36
+  size: 109, 185
+  orig: 109, 185
+  offset: 0, 0
+  index: -1
+close eyeL
+  rotate: false
+  xy: 1582, 94
+  size: 79, 28
+  orig: 79, 28
+  offset: 0, 0
+  index: -1
+close eyeR
+  rotate: false
+  xy: 2, 6
+  size: 107, 34
+  orig: 107, 34
+  offset: 0, 0
+  index: -1
+hair
+  rotate: false
+  xy: 1701, 446
+  size: 270, 131
+  orig: 270, 131
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 519, 412
+  size: 556, 434
+  orig: 556, 434
+  offset: 0, 0
+  index: -1
+kiem
+  rotate: false
+  xy: 2, 42
+  size: 515, 804
+  orig: 515, 804
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 1701, 579
+  size: 301, 267
+  orig: 301, 267
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 1691, 209
+  size: 340, 235
+  orig: 340, 235
+  offset: 0, 0
+  index: -1

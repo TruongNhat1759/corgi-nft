@@ -1,0 +1,223 @@
+
+banner.png
+size: 3817,986
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+anhsangkinh
+  rotate: false
+  xy: 243, 60
+  size: 40, 56
+  orig: 40, 56
+  offset: 0, 0
+  index: -1
+bautroi
+  rotate: false
+  xy: 1476, 457
+  size: 1125, 527
+  orig: 1125, 527
+  offset: 0, 0
+  index: -1
+bird arm
+  rotate: false
+  xy: 1001, 7
+  size: 204, 232
+  orig: 204, 232
+  offset: 0, 0
+  index: -1
+cat
+  rotate: false
+  xy: 1116, 342
+  size: 358, 642
+  orig: 358, 642
+  offset: 0, 0
+  index: -1
+cat cloak
+  rotate: false
+  xy: 2964, 494
+  size: 246, 261
+  orig: 246, 261
+  offset: 0, 0
+  index: -1
+cat tail
+  rotate: false
+  xy: 1207, 13
+  size: 448, 327
+  orig: 448, 327
+  offset: 0, 0
+  index: -1
+chim
+  rotate: false
+  xy: 1657, 5
+  size: 727, 450
+  orig: 727, 450
+  offset: 0, 0
+  index: -1
+cho
+  rotate: false
+  xy: 708, 241
+  size: 406, 743
+  orig: 406, 743
+  offset: 0, 0
+  index: -1
+daycung
+  rotate: false
+  xy: 13, 6
+  size: 69, 1
+  orig: 69, 1
+  offset: 0, 0
+  index: -1
+dog cape
+  rotate: false
+  xy: 3212, 537
+  size: 376, 218
+  orig: 376, 218
+  offset: 0, 0
+  index: -1
+dog cape 2
+  rotate: false
+  xy: 38, 48
+  size: 80, 68
+  orig: 80, 68
+  offset: 0, 0
+  index: -1
+eyes close
+  rotate: false
+  xy: 13, 9
+  size: 67, 23
+  orig: 67, 23
+  offset: 0, 0
+  index: -1
+eyesL
+  rotate: false
+  xy: 115, 5
+  size: 34, 41
+  orig: 34, 41
+  offset: 0, 0
+  index: -1
+eyesR
+  rotate: false
+  xy: 184, 57
+  size: 57, 59
+  orig: 57, 59
+  offset: 0, 0
+  index: -1
+giotnuoc
+  rotate: false
+  xy: 2, 34
+  size: 34, 82
+  orig: 34, 82
+  offset: 0, 0
+  index: -1
+glow4
+  rotate: false
+  xy: 3590, 462
+  size: 126, 128
+  orig: 126, 128
+  offset: 0, 0
+  index: -1
+glow5
+  rotate: false
+  xy: 120, 52
+  size: 62, 64
+  orig: 62, 64
+  offset: 0, 0
+  index: -1
+la1
+  rotate: false
+  xy: 303, 84
+  size: 7, 32
+  orig: 7, 32
+  offset: 0, 0
+  index: -1
+la2
+  rotate: false
+  xy: 285, 70
+  size: 16, 46
+  orig: 16, 46
+  offset: 0, 0
+  index: -1
+la3
+  rotate: false
+  xy: 96, 2
+  size: 17, 44
+  orig: 17, 44
+  offset: 0, 0
+  index: -1
+la4
+  rotate: false
+  xy: 82, 9
+  size: 12, 37
+  orig: 12, 37
+  offset: 0, 0
+  index: -1
+la5
+  rotate: false
+  xy: 2, 3
+  size: 9, 29
+  orig: 9, 29
+  offset: 0, 0
+  index: -1
+magic
+  rotate: false
+  xy: 2603, 479
+  size: 359, 276
+  orig: 359, 276
+  offset: 0, 0
+  index: -1
+rock 1
+  rotate: false
+  xy: 708, 6
+  size: 291, 233
+  orig: 291, 233
+  offset: 0, 0
+  index: -1
+rock dog
+  rotate: false
+  xy: 3590, 592
+  size: 225, 163
+  orig: 225, 163
+  offset: 0, 0
+  index: -1
+rock2
+  rotate: false
+  xy: 151, 2
+  size: 269, 48
+  orig: 269, 48
+  offset: 0, 0
+  index: -1
+shark
+  rotate: false
+  xy: 2, 118
+  size: 704, 866
+  orig: 704, 866
+  offset: 0, 0
+  index: -1
+tacke
+  rotate: false
+  xy: 3287, 77
+  size: 386, 383
+  orig: 386, 383
+  offset: 0, 0
+  index: -1
+taycho
+  rotate: false
+  xy: 2386, 37
+  size: 307, 418
+  orig: 307, 418
+  offset: 0, 0
+  index: -1
+thambay
+  rotate: false
+  xy: 2695, 8
+  size: 590, 469
+  orig: 590, 469
+  offset: 0, 0
+  index: -1
+thamco
+  rotate: false
+  xy: 2695, 757
+  size: 1117, 227
+  orig: 1117, 227
+  offset: 0, 0
+  index: -1

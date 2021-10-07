@@ -1,0 +1,132 @@
+
+Bird.png
+size: 1800,1539
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 12
+  rotate: false
+  xy: 305, 86
+  size: 96, 124
+  orig: 97, 124
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 732
+  size: 637, 805
+  orig: 637, 805
+  offset: 0, 0
+  index: -1
+eyes R
+  rotate: false
+  xy: 1139, 735
+  size: 91, 28
+  orig: 93, 30
+  offset: 1, 1
+  index: -1
+eyes l
+  rotate: false
+  xy: 1711, 1023
+  size: 53, 28
+  orig: 55, 30
+  offset: 1, 1
+  index: -1
+eyesbrown L
+  rotate: false
+  xy: 2, 2
+  size: 41, 28
+  orig: 43, 30
+  offset: 1, 1
+  index: -1
+eyesbrown R
+  rotate: false
+  xy: 641, 732
+  size: 56, 31
+  orig: 58, 33
+  offset: 1, 1
+  index: -1
+foot L
+  rotate: false
+  xy: 779, 107
+  size: 261, 66
+  orig: 263, 68
+  offset: 1, 1
+  index: -1
+foot R
+  rotate: false
+  xy: 1564, 215
+  size: 159, 67
+  orig: 161, 69
+  offset: 1, 1
+  index: -1
+hadn R
+  rotate: false
+  xy: 515, 126
+  size: 262, 604
+  orig: 262, 604
+  offset: 0, 0
+  index: -1
+hand L
+  rotate: false
+  xy: 779, 175
+  size: 358, 588
+  orig: 358, 588
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 1256, 1053
+  size: 542, 484
+  orig: 542, 484
+  offset: 0, 0
+  index: -1
+khieng
+  rotate: false
+  xy: 2, 212
+  size: 511, 518
+  orig: 511, 518
+  offset: 0, 0
+  index: -1
+kinh
+  rotate: false
+  xy: 1139, 53
+  size: 423, 229
+  orig: 423, 229
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 2, 32
+  size: 301, 178
+  orig: 301, 178
+  offset: 0, 0
+  index: -1
+shin L
+  rotate: false
+  xy: 1470, 284
+  size: 328, 430
+  orig: 328, 430
+  offset: 0, 0
+  index: -1
+shin R
+  rotate: false
+  xy: 1139, 284
+  size: 329, 430
+  orig: 329, 430
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 1256, 716
+  size: 453, 335
+  orig: 453, 335
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 641, 765
+  size: 613, 772
+  orig: 613, 772
+  offset: 0, 0
+  index: -1
