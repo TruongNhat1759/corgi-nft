@@ -11,15 +11,15 @@ import AnimationCharacterLarge from 'components/astoms/animations/AnimationChara
 const Home: React.FC = () => {
   const [character, setCharacter] = useState('corgi');
   const calc = (x: number, y:number) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-  const trans1 = (x: number, y:number) => `translate3d(${x / 12}px,${y / 12}px,0)`;
-  const trans2 = (x: number, y:number) => `translate3d(${x / 10 - 20}px,${y / 10 - 20}px,0)`;
-  const trans3 = (x: number, y:number) => `translate3d(${x / 15 - 20}px,${y / 15 - 20}px,0)`;
-  const trans4 = (x: number, y:number) => `translate3d(${x / 7}px,${y / 7}px,0)`;
-  const trans5 = (x: number, y:number) => `translate3d(${x / 6}px,${y / 6}px,0)`;
-  const trans6 = (x: number, y:number) => `translate3d(${x / 5.5}px,${y / 5.5}px,0)`;
-  const trans7 = (x: number, y:number) => `translate3d(${x / 4.5 - 20}px,${y / 4.5 - 20}px,0)`;
-  const trans8 = (x: number, y:number) => `translate3d(${x / 6 - 30}px,${y / 4 - 30}px,0)`;
-  const trans9 = (x: number, y:number) => `translate3d(${x / 10}px,${y / 10}px,0)`;
+  const trans1 = (x: number, y:number) => `translate3d(-${x / 12}px,-${y / 12}px,0)`;
+  const trans2 = (x: number, y:number) => `translate3d(-${x / 10}px,-${y / 10}px,0)`;
+  const trans3 = (x: number, y:number) => `translate3d(-${x / 15}px,-${y / 15}px,0)`;
+  const trans4 = (x: number, y:number) => `translate3d(-${x / 7}px,-${y / 7}px,0)`;
+  const trans5 = (x: number, y:number) => `translate3d(-${x / 6}px,-${y / 6}px,0)`;
+  const trans6 = (x: number, y:number) => `translate3d(-${x / 5.5}px,-${y / 5.5}px,0)`;
+  const trans7 = (x: number, y:number) => `translate3d(-${x / 4.5}px,-${y / 4.5}px,0)`;
+  const trans8 = (x: number, y:number) => `translate3d(-${x / 6}px,-${y / 4}px,0)`;
+  const trans9 = (x: number, y:number) => `translate3d(-${x / 10}px,-${y / 10}px,0)`;
   const [position, setPosition] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
   // lg:h-100vw
   return (
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
               <li><a href="/"><img src={`${HOME_URL}/assets/airdrop/icon_appstore.svg`} alt="icon_appstore" /></a></li>
             </ul>
           </div>
-          <h2 className="font-bold text-30 lg:text-52 text-center text-shadow mb-4">Join airdrop now</h2>
+          {/* <h2 className="font-bold text-30 lg:text-52 text-center text-shadow mb-4">Join airdrop now</h2>
           <p className="text-center text-gray-0 text-16 lg:text-20">Attend our Airdrop event to get valuable rewards. Invite your friends for more<br /> chances to be in Whitelisted private sale and get more reward in airdrop</p>
           <div className="max-w-304 mx-auto">
             <ul className="grid grid-cols-4 gap-4 my-4 lg:my-7">
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
               <li className="col-span-1 py-4 text-center bg-gray-50 rounded-lg leading-8"><h4 className="font-bold text-26 lg:text-34">25</h4><span className="block text-gray-0 text-12 lg:text-14 leading-4">Seconds</span></li>
             </ul>
             <h6 className="bg-yellow-0 text-16 lg:text-20 font-bold rounded-lg py-2 text-center cursor-pointer">Join Now</h6>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className="character">
@@ -251,7 +251,7 @@ const Home: React.FC = () => {
       <section className="tokennomics">
         <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-8 lg:pt-10">
           <h2 className="font-bold text-30 lg:text-52 text-center mb-4 lg:mb-14 text-shadow">Tokennomics</h2>
-          <div className="max-w-375 mx-auto lg:max-w-none grid grid-cols-2 lg:grid-cols-4 gap-10 pb-12 lg:pb-16 items-center">
+          <div className="max-w-375 mx-auto lg:max-w-none grid grid-cols-2 lg:grid-cols-4 gap-10 pb-12 lg:pb-16 items-center" onMouseMove={({ clientX: x, clientY: y }) => setPosition({ xy: calc(x, y) })}>
             <ul className="col-span-2 lg:col-span-1 grid grid-cols-2 gap-6 lg:gap-x-8 lg:gap-y-10 tokennomics-des order-2 lg:order-1">
               <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Ecosystem</span><span className="text-14 block opacity-70">24%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
               <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Farming</span><span className="text-14 block opacity-70">22%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
@@ -263,7 +263,7 @@ const Home: React.FC = () => {
               <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Seed Sale</span><span className="text-14 opacity-70 block">4%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
               <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Airdrop</span><span className="text-14 block opacity-70">1%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
             </ul>
-            <ul className="tokennomics-bounce col-span-2 relative h-330 lg:h-582 order-1 lg:order-2 z-10" onMouseMove={({ clientX: x, clientY: y }) => setPosition({ xy: calc(x, y) })}>
+            <ul className="tokennomics-bounce col-span-2 relative h-330 lg:h-582 order-1 lg:order-2 z-10">
               <animated.li style={{ transform: position.xy.interpolate(trans1) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/airdrop.png`} alt="airdrop" /></animated.li>
               <animated.li style={{ transform: position.xy.interpolate(trans2) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/team.png`} alt="team" /></animated.li>
               <animated.li style={{ transform: position.xy.interpolate(trans3) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/seed_sale.png`} alt="seed_sale" /></animated.li>
