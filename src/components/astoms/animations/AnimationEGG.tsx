@@ -69,13 +69,13 @@ const AnimationEGG = (props: IProps) => {
       <Stage
         className="rounded-lg"
         options={{ transparent: true }}
-        width={sizeScreen > 1360 ? 310 : 200}
+        width={sizeScreen > 1360 ? 310 : 356}
         height={sizeScreen > 1360 ? 310 : 200}
       >
         {spineData && (
           <Spine
             scale={sizeScreen > 1360 ? 0.85 : 0.6}
-            x={sizeScreen > 1360 ? 155 : 100}
+            x={sizeScreen > 1360 ? 155 : 175}
             y={sizeScreen > 1360 ? 165 : 100}
             spineData={spineData}
             mixes={mixes}

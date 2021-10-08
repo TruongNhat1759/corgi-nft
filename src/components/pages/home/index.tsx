@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { HOME_URL } from 'exports/HOME_URL';
 import { Link } from 'react-router-dom';
-// import DateCountdown from 'react-date-countdown-timer';
+import { useSpring, animated } from 'react-spring'
 import AnimationBanner from 'components/astoms/animations/AnimationBanner';
 import AnimationEGG from 'components/astoms/animations/AnimationEGG';
 import AnimationCharacter from 'components/astoms/animations/AnimationCharacter';
@@ -9,8 +9,18 @@ import AnimationCharacterSmall from 'components/astoms/animations/AnimationChara
 import AnimationCharacterLarge from 'components/astoms/animations/AnimationCharacterLarge';
 
 const Home: React.FC = () => {
-  const [bounce, setBounce] = useState('');
   const [character, setCharacter] = useState('corgi');
+  const calc = (x: number, y:number) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
+  const trans1 = (x: number, y:number) => `translate3d(${x / 12}px,${y / 12}px,0)`;
+  const trans2 = (x: number, y:number) => `translate3d(${x / 10 - 20}px,${y / 10 - 20}px,0)`;
+  const trans3 = (x: number, y:number) => `translate3d(${x / 15 - 20}px,${y / 15 - 20}px,0)`;
+  const trans4 = (x: number, y:number) => `translate3d(${x / 7}px,${y / 7}px,0)`;
+  const trans5 = (x: number, y:number) => `translate3d(${x / 6}px,${y / 6}px,0)`;
+  const trans6 = (x: number, y:number) => `translate3d(${x / 5.5}px,${y / 5.5}px,0)`;
+  const trans7 = (x: number, y:number) => `translate3d(${x / 4.5 - 20}px,${y / 4.5 - 20}px,0)`;
+  const trans8 = (x: number, y:number) => `translate3d(${x / 6 - 30}px,${y / 4 - 30}px,0)`;
+  const trans9 = (x: number, y:number) => `translate3d(${x / 10}px,${y / 10}px,0)`;
+  const [position, setPosition] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
   // lg:h-100vw
   return (
     <>
@@ -94,25 +104,94 @@ const Home: React.FC = () => {
                   <h6 className={`mt-2 ${character === 'eaglato' ? 'text-yellow-0' : ''}`}>EAGLATO</h6>
                 </li>
               </ul>
-              <h3 className="text-26 lg:text-48 font-bold mt-4 mb-4 lg:-mt-14 lg:mb-10">Corgi</h3>
-              <div className="flex items-center mb-4 lg:mb-10">
-                <div className="pr-4 lg:pr-8">
-                  <img src={`${HOME_URL}/assets/character/character_earth.png`} alt="Earth" className="max-w-35 lg:max-w-none mx-auto" />
-                  <h6 className="text-16 lg:text-20 font-bold mt-2 text-center">Earth</h6>
+              <div className={`${character === 'corgi' ? 'block' : 'hidden'}`}>
+                <h3 className="text-26 lg:text-48 font-bold mt-4 mb-4 lg:-mt-14 lg:mb-10">Corgi</h3>
+                <div className="flex items-center mb-4 lg:mb-10">
+                  <div className="pr-4 lg:pr-8">
+                    <img src={`${HOME_URL}/assets/character/earth.png`} alt="Earth" className="max-w-35 lg:max-w-none mx-auto" />
+                    <h6 className="text-16 lg:text-20 font-bold mt-2 text-center">Earth</h6>
+                  </div>
+                  <p className="h-14 lg:h-16 bg-white w-px"></p>
+                  <ul className="pl-4 lg:pl-8">
+                    <li className="flex items-center">
+                      <img src={`${HOME_URL}/assets/character/character_corgi_icon01.svg`} alt="Power of earth" className="max-w-25 lg:max-w-32" />
+                      <h6 className="text-16 lg:text-20 font-bold ml-2 lg:ml-4">Power of earth</h6>
+                    </li>
+                    <li className="flex items-center mt-2 lg:mt-3">
+                      <img src={`${HOME_URL}/assets/character/character_corgi_icon02.svg`} alt="Fury attack" className="max-w-25 lg:max-w-32" />
+                      <h6 className="text-16 lg:text-20 font-bold ml-2 lg:ml-4">Fury attack</h6>
+                    </li>
+                  </ul>
                 </div>
-                <p className="h-14 lg:h-16 bg-white w-px"></p>
-                <ul className="pl-4 lg:pl-8">
-                  <li className="flex items-center">
-                    <img src={`${HOME_URL}/assets/character/character_power.png`} alt="Power of earth" className="max-w-25 lg:max-w-none" />
-                    <h6 className="text-16 lg:text-20 font-bold ml-2 lg:ml-4">Power of earth</h6>
-                  </li>
-                  <li className="flex items-center mt-2 lg:mt-3">
-                    <img src={`${HOME_URL}/assets/character/character_up.png`} alt="Fury attack" className="max-w-25 lg:max-w-none" />
-                    <h6 className="text-16 lg:text-20 font-bold ml-2 lg:ml-4">Fury attack</h6>
-                  </li>
-                </ul>
+                <p className="text-gray-0">Corgi is humans best life companions. One day, he accidentally picked up a sparkling stone on the farm which caused him an unusual transformation. He was suddenly conscious and able to talk. The power of the Earth Stone also helped him master Earth-type skill sets</p>
               </div>
-              <p className="text-gray-0">Corgi is humans best life companions. One day, he accidentally picked up a sparkling stone on the farm which caused him an unusual transformation. He was suddenly conscious and able to talk. The power of the Earth Stone also helped him master Earth-type skill sets</p>
+
+              <div className={`${character === 'akita' ? 'block' : 'hidden'}`}>
+                <h3 className="text-26 lg:text-48 font-bold mt-4 mb-4 lg:-mt-14 lg:mb-10">Akita</h3>
+                <div className="flex items-center mb-4 lg:mb-10">
+                  <div className="pr-4 lg:pr-8">
+                    <img src={`${HOME_URL}/assets/character/fire.png`} alt="Fire" className="max-w-35 lg:max-w-none mx-auto" />
+                    <h6 className="text-16 lg:text-20 font-bold mt-2 text-center">Fire</h6>
+                  </div>
+                  <p className="h-14 lg:h-16 bg-white w-px"></p>
+                  <ul className="pl-4 lg:pl-8">
+                    <li className="flex items-center">
+                      <img src={`${HOME_URL}/assets/character/character_akita_icon01.svg`} alt="ATTACH UP" className="max-w-25 lg:max-w-32" />
+                      <h6 className="text-16 lg:text-20 font-bold ml-2 lg:ml-4">ATTACH UP</h6>
+                    </li>
+                    <li className="flex items-center mt-2 lg:mt-3">
+                      <img src={`${HOME_URL}/assets/character/character_akita_icon02.svg`} alt="STUN ARROW" className="max-w-25 lg:max-w-32" />
+                      <h6 className="text-16 lg:text-20 font-bold ml-2 lg:ml-4">STUN ARROW</h6>
+                    </li>
+                  </ul>
+                </div>
+                <p className="text-gray-0">Akita Cat - Akita loves shiny things. He found a red stone on a tree branch which inadvertently granted his fire elemental powers and proficiency in Fire-type skill sets</p>
+              </div>
+
+              <div className={`${character === 'dodo' ? 'block' : 'hidden'}`}>
+                <h3 className="text-26 lg:text-48 font-bold mt-4 mb-4 lg:-mt-14 lg:mb-10">Dodo</h3>
+                <div className="flex items-center mb-4 lg:mb-10">
+                  <div className="pr-4 lg:pr-8">
+                    <img src={`${HOME_URL}/assets/character/water.png`} alt="Dodo" className="max-w-35 lg:max-w-none mx-auto" />
+                    <h6 className="text-16 lg:text-20 font-bold mt-2 text-center">Water</h6>
+                  </div>
+                  <p className="h-14 lg:h-16 bg-white w-px"></p>
+                  <ul className="pl-4 lg:pl-8">
+                    <li className="flex items-center">
+                      <img src={`${HOME_URL}/assets/character/character_shark_icon01.svg`} alt="Defend up" className="max-w-25 lg:max-w-32" />
+                      <h6 className="text-16 lg:text-20 font-bold ml-2 lg:ml-4">Defend up</h6>
+                    </li>
+                    <li className="flex items-center mt-2 lg:mt-3">
+                      <img src={`${HOME_URL}/assets/character/character_shark_icon02.svg`} alt="Freeze ice" className="max-w-25 lg:max-w-32" />
+                      <h6 className="text-16 lg:text-20 font-bold ml-2 lg:ml-4">Freeze ice</h6>
+                    </li>
+                  </ul>
+                </div>
+                <p className="text-gray-0">Dodo Shark - The water stone falling into the deep ocean had frightened all the sea creatures. DoDo, on the other hand, was very curious about the stone. With little suspicions, he ate it, then an unusual change occurred. The lower fins turned into legs allowing him to move. Also, Dodo acquired for himself Water-type skill sets</p>
+              </div>
+
+              <div className={`${character === 'eaglato' ? 'block' : 'hidden'}`}>
+                <h3 className="text-26 lg:text-48 font-bold mt-4 mb-4 lg:-mt-14 lg:mb-10">Eaglato</h3>
+                <div className="flex items-center mb-4 lg:mb-10">
+                  <div className="pr-4 lg:pr-8">
+                    <img src={`${HOME_URL}/assets/character/wind.png`} alt="Eaglato" className="max-w-35 lg:max-w-none mx-auto" />
+                    <h6 className="text-16 lg:text-20 font-bold mt-2 text-center">Air</h6>
+                  </div>
+                  <p className="h-14 lg:h-16 bg-white w-px"></p>
+                  <ul className="pl-4 lg:pl-8">
+                    <li className="flex items-center">
+                      <img src={`${HOME_URL}/assets/character/character_bird_icon01.svg`} alt="Bless of wind" className="max-w-25 lg:max-w-32" />
+                      <h6 className="text-16 lg:text-20 font-bold ml-2 lg:ml-4">Bless of wind</h6>
+                    </li>
+                    <li className="flex items-center mt-2 lg:mt-3">
+                      <img src={`${HOME_URL}/assets/character/character_bird_icon02.svg`} alt="Lighting chain" className="max-w-25 lg:max-w-32" />
+                      <h6 className="text-16 lg:text-20 font-bold ml-2 lg:ml-4">Lighting chain</h6>
+                    </li>
+                  </ul>
+                </div>
+                <p className="text-gray-0">Eaglato Eagle - Once flying over the highest mountain in LaBian, Eaglato took a white-light stone which caught his eyes, then swallowed it without hesitation. Suddenly, he became conscious and was equipped with Wind-type skill sets. The Eaglato even dreamt of the destruction of humanity by the Evil lord Lothor.</p>
+              </div>
+
             </div>
           </div>
         </div>
@@ -184,16 +263,16 @@ const Home: React.FC = () => {
               <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Seed Sale</span><span className="text-14 opacity-70 block">4%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
               <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Airdrop</span><span className="text-14 block opacity-70">1%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
             </ul>
-            <ul className="tokennomics-bounce col-span-2 relative h-330 lg:h-582 order-1 lg:order-2 z-10">
-              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'airdrop' ? 'scale-125 -z-1' : ''}`} onClick={(event) => setBounce('airdrop')}><img src={`${HOME_URL}/assets/tokennomics/airdrop.png`} alt="airdrop" /></li>
-              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'team' ? 'scale-125 -z-1' : ''}`} onClick={(event) => setBounce('team')}><img src={`${HOME_URL}/assets/tokennomics/team.png`} alt="team" /></li>
-              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'seed_sale' ? 'scale-125 -z-1' : ''}`} onClick={(event) => setBounce('seed_sale')}><img src={`${HOME_URL}/assets/tokennomics/seed_sale.png`} alt="seed_sale" /></li>
-              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'presale' ? 'scale-125 -z-1' : ''}`} onClick={(event) => setBounce('presale')}><img src={`${HOME_URL}/assets/tokennomics/presale.png`} alt="presale" /></li>
-              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'liquidity' ? 'scale-125 -z-1' : ''}`} onClick={(event) => setBounce('liquidity')}><img src={`${HOME_URL}/assets/tokennomics/liquidity.png`} alt="liquidity" /></li>
-              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'prevate_sale' ? 'scale-125 -z-1' : ''}`} onClick={(event) => setBounce('prevate_sale')}><img src={`${HOME_URL}/assets/tokennomics/prevate_sale.png`} alt="prevate_sale" /></li>
-              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'partners' ? 'scale-125 -z-1' : ''}`} onClick={(event) => setBounce('partners')}><img src={`${HOME_URL}/assets/tokennomics/partners.png`} alt="partners" /></li>
-              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'farming' ? 'scale-125 -z-1' : ''}`} onClick={(event) => setBounce('farming')}><img src={`${HOME_URL}/assets/tokennomics/farming.png`} alt="farming" /></li>
-              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'fund' ? 'scale-125 -z-1' : ''}`} onClick={(event) => setBounce('fund')}><img src={`${HOME_URL}/assets/tokennomics/fund.png`} alt="fund" /></li>
+            <ul className="tokennomics-bounce col-span-2 relative h-330 lg:h-582 order-1 lg:order-2 z-10" onMouseMove={({ clientX: x, clientY: y }) => setPosition({ xy: calc(x, y) })}>
+              <animated.li style={{ transform: position.xy.interpolate(trans1) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/airdrop.png`} alt="airdrop" /></animated.li>
+              <animated.li style={{ transform: position.xy.interpolate(trans2) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/team.png`} alt="team" /></animated.li>
+              <animated.li style={{ transform: position.xy.interpolate(trans3) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/seed_sale.png`} alt="seed_sale" /></animated.li>
+              <animated.li style={{ transform: position.xy.interpolate(trans4) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/presale.png`} alt="presale" /></animated.li>
+              <animated.li style={{ transform: position.xy.interpolate(trans5) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/liquidity.png`} alt="liquidity" /></animated.li>
+              <animated.li style={{ transform: position.xy.interpolate(trans6) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/prevate_sale.png`} alt="prevate_sale" /></animated.li>
+              <animated.li style={{ transform: position.xy.interpolate(trans7) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/partners.png`} alt="partners" /></animated.li>
+              <animated.li style={{ transform: position.xy.interpolate(trans8) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/farming.png`} alt="farming" /></animated.li>
+              <animated.li style={{ transform: position.xy.interpolate(trans9) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/fund.png`} alt="fund" /></animated.li>
             </ul>
             <ul className="col-span-2 lg:col-span-1 order-3">
               <li className="font-bold px-6 lg:px-8 rounded-xl pt-4 pb-3 lg:text-20 text-16 mb-5 bg-gray-50 backdrop-filter backdrop-blur-3xl"><span className="text-12 block text-gray-150 font-normal">TOKEN NAME</span>COR</li>
