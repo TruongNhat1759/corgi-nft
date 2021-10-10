@@ -85,11 +85,11 @@ const AnimationBanner = (props: IProps) => {
         className="rounded-lg"
         options={{ transparent: true }}
         width={size.width}
-        height={size.width / 2 - 70}
+        height={size.width * 3}
       >
         {spineData && (
           <Spine
-            scale={size.width / 950}
+            scale={size.width / 1400}
             x={size.width / 2}
             y={size.width / 2 - 40}
             spineData={spineData}

@@ -1,0 +1,20 @@
+
+domdom.png
+size: 194,132
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow4
+  rotate: false
+  xy: 2, 2
+  size: 126, 128
+  orig: 126, 128
+  offset: 0, 0
+  index: -1
+glow5
+  rotate: false
+  xy: 130, 66
+  size: 62, 64
+  orig: 62, 64
+  offset: 0, 0
+  index: -1

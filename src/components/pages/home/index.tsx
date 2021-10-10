@@ -7,24 +7,25 @@ import AnimationEGG from 'components/astoms/animations/AnimationEGG';
 import AnimationCharacter from 'components/astoms/animations/AnimationCharacter';
 import AnimationCharacterSmall from 'components/astoms/animations/AnimationCharacterSmall';
 import AnimationCharacterLarge from 'components/astoms/animations/AnimationCharacterLarge';
+import AnimationDomDom from 'components/astoms/animations/AnimationDomDom';
 
 const Home: React.FC = () => {
   const [character, setCharacter] = useState('corgi');
   const calc = (x: number, y:number) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-  const trans1 = (x: number, y:number) => `translate3d(-${x / 12}px,-${y / 12}px,0)`;
-  const trans2 = (x: number, y:number) => `translate3d(-${x / 10}px,-${y / 10}px,0)`;
-  const trans3 = (x: number, y:number) => `translate3d(-${x / 15}px,-${y / 15}px,0)`;
-  const trans4 = (x: number, y:number) => `translate3d(-${x / 7}px,-${y / 7}px,0)`;
-  const trans5 = (x: number, y:number) => `translate3d(-${x / 6}px,-${y / 6}px,0)`;
-  const trans6 = (x: number, y:number) => `translate3d(-${x / 5.5}px,-${y / 5.5}px,0)`;
-  const trans7 = (x: number, y:number) => `translate3d(-${x / 4.5}px,-${y / 4.5}px,0)`;
-  const trans8 = (x: number, y:number) => `translate3d(-${x / 6}px,-${y / 4}px,0)`;
-  const trans9 = (x: number, y:number) => `translate3d(-${x / 10}px,-${y / 10}px,0)`;
+  const trans1 = (x: number, y:number) => `translate(${x / 12}px,${y / 12}px)`;
+  const trans2 = (x: number, y:number) => `translate(${x / 10}px,${y / 10}px)`;
+  const trans3 = (x: number, y:number) => `translate(${x / 15}px,${y / 15}px)`;
+  const trans4 = (x: number, y:number) => `translate(${x / 7}px,${y / 7}px)`;
+  const trans5 = (x: number, y:number) => `translate(${x / 6}px,${y / 6}px)`;
+  const trans6 = (x: number, y:number) => `translate(${x / 5.5}px,${y / 5.5}px)`;
+  const trans7 = (x: number, y:number) => `translate(${x / 4.5}px,${y / 4.5}px)`;
+  const trans8 = (x: number, y:number) => `translate(${x / 6}px,${y / 4}px)`;
+  const trans9 = (x: number, y:number) => `translate(${x / 10}px,${y / 10}px)`;
   const [position, setPosition] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
   // lg:h-100vw
   return (
     <>
-      <section className="banner  pt-30vw lg:pt-35vw">
+      <section className="banner pt-30vw lg:pt-35vw relative mb-31vw">
         {/* <div className="absolute w-full h-full bg-yellow-0 top-0 left-0"></div> */}
         <AnimationBanner link={`${HOME_URL}/assets/animations/banner/banner.json`} name="banner"></AnimationBanner>
         <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-10 pb-12 lg:pb-32 w-full">
@@ -62,25 +63,29 @@ const Home: React.FC = () => {
                 <li className={`${character === 'corgi' ? 'block' : 'hidden'}`}>
                   <div className="relative max-w-full mx-auto">
                     <img src={`${HOME_URL}/assets/character/character_big.png`} alt="CORGI" className="mx-auto" />
-                    <AnimationCharacter link={`${HOME_URL}/assets/animations/Corgi/corgi_anim.json`} name="Corgi"></AnimationCharacter>
+                    <AnimationDomDom link={`${HOME_URL}/assets/animations/domdom/domdom.json`} name="Domdom"></AnimationDomDom> 
+                    <AnimationCharacter link={`${HOME_URL}/assets/animations/Corgi/corgi_anim.json`} name="Corgi"></AnimationCharacter> 
                   </div>
                 </li>
                 <li className={`${character === 'akita' ? 'block' : 'hidden'}`}>
                   <div className="relative max-w-full mx-auto">
                     <img src={`${HOME_URL}/assets/character/character_big.png`} alt="AKITA" className="mx-auto" />
-                    <AnimationCharacterSmall link={`${HOME_URL}/assets/animations/Cat/Cat.json`} name="AKITA"></AnimationCharacterSmall>
+                    <AnimationDomDom link={`${HOME_URL}/assets/animations/domdom/domdom.json`} name="Domdom"></AnimationDomDom> 
+                    <AnimationCharacterSmall link={`${HOME_URL}/assets/animations/Cat/Cat.json`} name="AKITA"></AnimationCharacterSmall>  
                   </div>
                 </li>
                 <li className={`${character === 'dodo' ? 'block' : 'hidden'}`}>
                   <div className="relative max-w-full mx-auto">
                     <img src={`${HOME_URL}/assets/character/character_big.png`} alt="DODO" className="mx-auto" />
-                    <AnimationCharacterLarge link={`${HOME_URL}/assets/animations/Shark/Shark.json`} name="Shark"></AnimationCharacterLarge>
+                    <AnimationDomDom link={`${HOME_URL}/assets/animations/domdom/domdom.json`} name="Domdom"></AnimationDomDom> 
+                    <AnimationCharacterLarge link={`${HOME_URL}/assets/animations/Shark/Shark.json`} name="Shark"></AnimationCharacterLarge>  
                   </div>
                 </li>
                 <li className={`${character === 'eaglato' ? 'block' : 'hidden'}`}>
                   <div className="relative max-w-full mx-auto">
                     <img src={`${HOME_URL}/assets/character/character_big.png`} alt="EAGLATO" className="mx-auto" />
-                    <AnimationCharacterLarge link={`${HOME_URL}/assets/animations/Bird/Bird.json`} name="Shark"></AnimationCharacterLarge>
+                    <AnimationDomDom link={`${HOME_URL}/assets/animations/domdom/domdom.json`} name="Domdom"></AnimationDomDom> 
+                    <AnimationCharacterLarge link={`${HOME_URL}/assets/animations/Bird/Bird.json`} name="Shark"></AnimationCharacterLarge>  
                   </div>
                 </li>
               </ul>
@@ -251,7 +256,7 @@ const Home: React.FC = () => {
       <section className="tokennomics">
         <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-8 lg:pt-10">
           <h2 className="font-bold text-30 lg:text-52 text-center mb-4 lg:mb-14 text-shadow">Tokennomics</h2>
-          <div className="max-w-375 mx-auto lg:max-w-none grid grid-cols-2 lg:grid-cols-4 gap-10 pb-12 lg:pb-16 items-center" onMouseMove={({ clientX: x, clientY: y }) => setPosition({ xy: calc(x, y) })}>
+          <div className="max-w-375 mx-auto lg:max-w-none grid grid-cols-2 lg:grid-cols-4 gap-10 pb-12 lg:pb-16 items-center">
             <ul className="col-span-2 lg:col-span-1 grid grid-cols-2 gap-6 lg:gap-x-8 lg:gap-y-10 tokennomics-des order-2 lg:order-1">
               <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Ecosystem</span><span className="text-14 block opacity-70">24%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
               <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Farming</span><span className="text-14 block opacity-70">22%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
@@ -263,7 +268,7 @@ const Home: React.FC = () => {
               <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Seed Sale</span><span className="text-14 opacity-70 block">4%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
               <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Airdrop</span><span className="text-14 block opacity-70">1%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
             </ul>
-            <ul className="tokennomics-bounce col-span-2 relative h-330 lg:h-582 order-1 lg:order-2 z-10">
+            <ul className="tokennomics-bounce col-span-2 relative h-330 lg:h-582 order-1 lg:order-2 z-10" onMouseMove={({ clientX: x, clientY: y }) => setPosition({ xy: calc(x, y) })}>
               <animated.li style={{ transform: position.xy.interpolate(trans1) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/airdrop.png`} alt="airdrop" /></animated.li>
               <animated.li style={{ transform: position.xy.interpolate(trans2) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/team.png`} alt="team" /></animated.li>
               <animated.li style={{ transform: position.xy.interpolate(trans3) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/seed_sale.png`} alt="seed_sale" /></animated.li>

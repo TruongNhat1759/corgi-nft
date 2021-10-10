@@ -69,14 +69,14 @@ const AnimationCharacter = (props: IProps) => {
       <Stage
         className="rounded-lg"
         options={{ transparent: true }}
-        width={sizeScreen > 1360 ? 660 : 355}
-        height={sizeScreen > 1360 ? 592 : 280}
+        width={sizeScreen > 1023 ? 660 : 355}
+        height={sizeScreen > 1023 ? 592 : 280}
       >
         {spineData && (
           <Spine
-            scale={sizeScreen > 1360 ? 0.43 : 0.2}
-            x={sizeScreen > 1360 ? 260 : 150}
-            y={sizeScreen > 1360 ? 540 : 280}
+            scale={sizeScreen > 1023 ? 0.43 : 0.2}
+            x={sizeScreen > 1023 ? 260 : 150}
+            y={sizeScreen > 1023 ? 540 : 280}
             spineData={spineData}
             mixes={mixes}
             animationStateCallback={stateRef}

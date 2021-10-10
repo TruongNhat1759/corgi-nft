@@ -655,6 +655,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.mb-31vw {
+  margin-bottom: 31vw;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }

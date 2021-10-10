@@ -87,6 +87,8 @@ module.exports = {
         '4vw': '4vw',
         '8vw': '8vw',
         '9.5vw': '9.5vw',
+        '31vw': '31vw',
+        
       },
       screens: {
         'screen1360': '1360px',
