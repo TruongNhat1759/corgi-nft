@@ -80,6 +80,7 @@ module.exports = {
       },
       padding: {
         '3/100': '3%',
+        '13vw': '13vw',
         '30vw': '30vw',
         '35vw': '35vw',
       },

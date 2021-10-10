@@ -25,7 +25,7 @@ const Home: React.FC = () => {
   // lg:h-100vw
   return (
     <>
-      <section className="banner pt-30vw lg:pt-35vw relative mb-31vw">
+      <section className="banner pt-30vw lg:pt-35vw relative lg:mb-36">
         {/* <div className="absolute w-full h-full bg-yellow-0 top-0 left-0"></div> */}
         <AnimationBanner link={`${HOME_URL}/assets/animations/banner/banner.json`} name="banner"></AnimationBanner>
         <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-10 pb-12 lg:pb-32 w-full">
@@ -54,8 +54,8 @@ const Home: React.FC = () => {
           </div> */}
         </div>
       </section>
-      <section className="character relative">
-        <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-8 lg:pt-10 pb-12 lg:pb-20">
+      <section className="character">
+        <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-8 lg:pt-10 pb-12 lg:pb-20 relative">
           <h2 className="font-bold text-30 lg:text-52 text-center mb-4 lg:mb-14 text-shadow">Character</h2>
           <div className="block lg:grid grid-cols-12 justify-between">
             <div className="col-span-6">

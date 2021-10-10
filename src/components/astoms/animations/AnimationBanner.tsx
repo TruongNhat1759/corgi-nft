@@ -77,7 +77,6 @@ const AnimationBanner = (props: IProps) => {
 
     return size;
   };
-
   const size = useResize();
   return (
     <div className="h-full rounded" onClick={loadAnimation} role="none">
@@ -85,13 +84,13 @@ const AnimationBanner = (props: IProps) => {
         className="rounded-lg"
         options={{ transparent: true }}
         width={size.width}
-        height={size.width * 3}
+        height={size.width / 1.35}
       >
         {spineData && (
           <Spine
             scale={size.width / 1400}
             x={size.width / 2}
-            y={size.width / 2 - 40}
+            y={size.width / 2 - 15}
             spineData={spineData}
             mixes={mixes}
             animationStateCallback={stateRef}
