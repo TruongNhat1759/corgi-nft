@@ -8,18 +8,18 @@ import Spine from './Spine';
 
 const mixes = [
   {
-    from: 'Attack',
-    to: 'Attack',
+    from: 'standing',
+    to: 'standing',
     duration: 0.2,
   },
   {
-    from: 'Attack',
-    to: 'Attack',
+    from: 'standing',
+    to: 'standing',
     duration: 0.4,
   },
   {
-    from: 'Attack',
-    to: 'Attack',
+    from: 'standing',
+    to: 'standing',
     duration: 0.4,
   },
 ];
@@ -45,16 +45,16 @@ const AnimationCharacterMedium = (props: IProps) => {
 
   const stateRef = useCallback((state: any) => {
     if (state) {
-      state.setAnimation(0, 'Attack', false);
-      state.addAnimation(0, 'Attack', true, 0);
+      state.setAnimation(0, 'standing', false);
+      state.addAnimation(0, 'standing', true, 0);
     }
     setAnimationState(state);
   }, []);
 
   const loadAnimation = useCallback(() => {
     if (animationState) {
-      (animationState as any).setAnimation(0, 'Attack', false);
-      (animationState as any).addAnimation(0, 'Attack', true, 0);
+      (animationState as any).setAnimation(0, 'standing', false);
+      (animationState as any).addAnimation(0, 'standing', true, 0);
     }
   }, [animationState]);
 

@@ -8,18 +8,18 @@ import Spine from './Spine';
 
 const mixes = [
   {
-    from: 'idle',
-    to: 'idle',
+    from: 'standing',
+    to: 'standing',
     duration: 0.2,
   },
   {
-    from: 'idle',
-    to: 'idle',
+    from: 'standing',
+    to: 'standing',
     duration: 0.4,
   },
   {
-    from: 'idle',
-    to: 'idle',
+    from: 'standing',
+    to: 'standing',
     duration: 0.4,
   },
 ];
@@ -45,16 +45,16 @@ const AnimationCharacterSmall = (props: IProps) => {
 
   const stateRef = useCallback((state: any) => {
     if (state) {
-      state.setAnimation(0, 'idle', false);
-      state.addAnimation(0, 'idle', true, 0);
+      state.setAnimation(0, 'standing', false);
+      state.addAnimation(0, 'standing', true, 0);
     }
     setAnimationState(state);
   }, []);
 
   const loadAnimation = useCallback(() => {
     if (animationState) {
-      (animationState as any).setAnimation(0, 'idle', false);
-      (animationState as any).addAnimation(0, 'idle', true, 0);
+      (animationState as any).setAnimation(0, 'standing', false);
+      (animationState as any).addAnimation(0, 'standing', true, 0);
     }
   }, [animationState]);
 
@@ -74,7 +74,7 @@ const AnimationCharacterSmall = (props: IProps) => {
       >
         {spineData && (
           <Spine
-            scale={sizeScreen > 1360 ? 0.6 : 0.27}
+            scale={sizeScreen > 1360 ? 0.45 : 0.2}
             x={sizeScreen > 1360 ? 280 : 170}
             y={sizeScreen > 1360 ? 540 : 280}
             spineData={spineData}

@@ -8,18 +8,18 @@ import Spine from './Spine';
 
 const mixes = [
   {
-    from: 'idle_weapon',
-    to: 'idle_weapon',
+    from: 'standing',
+    to: 'standing',
     duration: 0.2,
   },
   {
-    from: 'idle_weapon',
-    to: 'idle_weapon',
+    from: 'standing',
+    to: 'standing',
     duration: 0.4,
   },
   {
-    from: 'idle_weapon',
-    to: 'idle_weapon',
+    from: 'standing',
+    to: 'standing',
     duration: 0.4,
   },
 ];
@@ -45,16 +45,16 @@ const AnimationCharacter = (props: IProps) => {
 
   const stateRef = useCallback((state: any) => {
     if (state) {
-      state.setAnimation(0, 'idle_weapon', false);
-      state.addAnimation(0, 'idle_weapon', true, 0);
+      state.setAnimation(0, 'standing', false);
+      state.addAnimation(0, 'standing', true, 0);
     }
     setAnimationState(state);
   }, []);
 
   const loadAnimation = useCallback(() => {
     if (animationState) {
-      (animationState as any).setAnimation(0, 'idle_weapon', false);
-      (animationState as any).addAnimation(0, 'idle_weapon', true, 0);
+      (animationState as any).setAnimation(0, 'standing', false);
+      (animationState as any).addAnimation(0, 'standing', true, 0);
     }
   }, [animationState]);
 
