@@ -54,7 +54,7 @@ const Home: React.FC = () => {
           </div> */}
         </div>
       </section>
-      <section className="character">
+      <section className="character relative">
         <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-8 lg:pt-10 pb-12 lg:pb-20">
           <h2 className="font-bold text-30 lg:text-52 text-center mb-4 lg:mb-14 text-shadow">Character</h2>
           <div className="block lg:grid grid-cols-12 justify-between">
