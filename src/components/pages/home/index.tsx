@@ -11,22 +11,10 @@ import AnimationDomDom from 'components/astoms/animations/AnimationDomDom';
 
 const Home: React.FC = () => {
   const [character, setCharacter] = useState('corgi');
-  const calc = (x: number, y:number) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-  const trans1 = (x: number, y:number) => `translate(${x / 12}px,${y / 12}px)`;
-  const trans2 = (x: number, y:number) => `translate(${x / 10}px,${y / 10}px)`;
-  const trans3 = (x: number, y:number) => `translate(${x / 15}px,${y / 15}px)`;
-  const trans4 = (x: number, y:number) => `translate(${x / 7}px,${y / 7}px)`;
-  const trans5 = (x: number, y:number) => `translate(${x / 6}px,${y / 6}px)`;
-  const trans6 = (x: number, y:number) => `translate(${x / 5.5}px,${y / 5.5}px)`;
-  const trans7 = (x: number, y:number) => `translate(${x / 4.5}px,${y / 4.5}px)`;
-  const trans8 = (x: number, y:number) => `translate(${x / 6}px,${y / 4}px)`;
-  const trans9 = (x: number, y:number) => `translate(${x / 10}px,${y / 10}px)`;
-  const [position, setPosition] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
-  // lg:h-100vw
+  const [bounce, setBounce] = useState('');
   return (
     <>
       <section className="banner pt-30vw lg:pt-35vw relative lg:mb-36">
-        {/* <div className="absolute w-full h-full bg-yellow-0 top-0 left-0"></div> */}
         <AnimationBanner link={`${HOME_URL}/assets/animations/banner/banner.json`} name="banner"></AnimationBanner>
         <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-10 pb-12 lg:pb-32 w-full">
           <div className="relative mb-4">
@@ -255,29 +243,29 @@ const Home: React.FC = () => {
 
       <section className="tokennomics">
         <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-8 lg:pt-10">
-          <h2 className="font-bold text-30 lg:text-52 text-center mb-4 lg:mb-14 text-shadow">Tokennomics</h2>
-          <div className="max-w-375 mx-auto lg:max-w-none grid grid-cols-2 lg:grid-cols-4 gap-10 pb-12 lg:pb-16 items-center">
-            <ul className="col-span-2 lg:col-span-1 grid grid-cols-2 gap-6 lg:gap-x-8 lg:gap-y-10 tokennomics-des order-2 lg:order-1">
-              <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Ecosystem</span><span className="text-14 block opacity-70">24%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
-              <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Farming</span><span className="text-14 block opacity-70">22%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
-              <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Team</span><span className="text-14 block opacity-70">16%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
-              <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Presale</span><span className="text-14 block opacity-70">10%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
-              <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Partners</span><span className="text-14 block opacity-70">10%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
-              <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Liquidity</span><span className="text-14 block opacity-70">8%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
-              <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Prevate Sale</span><span className="text-14 opacity-70 block">5%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
-              <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Seed Sale</span><span className="text-14 opacity-70 block">4%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
-              <li className="col-span-1 leading-4 relative pl-5"><span className="circle absolute top-1.5 left-0 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Airdrop</span><span className="text-14 block opacity-70">1%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
+          <h2 className="font-bold text-30 lg:text-52 text-center mb-16 lg:mb-28 text-shadow">Tokennomics</h2>
+          <div className="max-w-375 mx-auto lg:max-w-none grid grid-cols-2 lg:grid-cols-4 gap-6 pb-12 lg:pb-16 items-center">
+            <ul className="col-span-2 lg:col-span-1 grid grid-cols-2 gap-6 lg:gap-x-6 lg:gap-y-8 tokennomics-des order-2 lg:order-1 -mt-12 lg:mt-auto">
+              <li className={`col-span-1 leading-4 relative py-3 pl-8 pr-2 transition-all rounded-xl ${bounce === 'fund' ? 'bg-gray-50' : ''}`}><span className="circle absolute top-4 left-2.5 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Ecosystem</span><span className="text-14 block opacity-70">24%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
+              <li className={`col-span-1 leading-4 relative py-3 pl-8 pr-2 transition-all rounded-xl ${bounce === 'farming' ? 'bg-gray-50' : ''}`}><span className="circle absolute top-4 left-2.5 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Farming</span><span className="text-14 block opacity-70">22%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
+              <li className={`col-span-1 leading-4 relative py-3 pl-8 pr-2 transition-all rounded-xl ${bounce === 'team' ? 'bg-gray-50' : ''}`}><span className="circle absolute top-4 left-2.5 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Team</span><span className="text-14 block opacity-70">16%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
+              <li className={`col-span-1 leading-4 relative py-3 pl-8 pr-2 transition-all rounded-xl ${bounce === 'presale' ? 'bg-gray-50' : ''}`}><span className="circle absolute top-4 left-2.5 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Presale</span><span className="text-14 block opacity-70">10%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
+              <li className={`col-span-1 leading-4 relative py-3 pl-8 pr-2 transition-all rounded-xl ${bounce === 'partners' ? 'bg-gray-50' : ''}`}><span className="circle absolute top-4 left-2.5 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Partners</span><span className="text-14 block opacity-70">10%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
+              <li className={`col-span-1 leading-4 relative py-3 pl-8 pr-2 transition-all rounded-xl ${bounce === 'liquidity' ? 'bg-gray-50' : ''}`}><span className="circle absolute top-4 left-2.5 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Liquidity</span><span className="text-14 block opacity-70">8%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
+              <li className={`col-span-1 leading-4 relative py-3 pl-8 pr-2 transition-all rounded-xl ${bounce === 'prevate_sale' ? 'bg-gray-50' : ''}`}><span className="circle absolute top-4 left-2.5 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Prevate Sale</span><span className="text-14 opacity-70 block">5%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
+              <li className={`col-span-1 leading-4 relative py-3 pl-8 pr-2 transition-all rounded-xl ${bounce === 'seed_sale' ? 'bg-gray-50' : ''}`}><span className="circle absolute top-4 left-2.5 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Seed Sale</span><span className="text-14 opacity-70 block">4%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
+              <li className={`col-span-1 leading-4 relative py-3 pl-8 pr-2 transition-all rounded-xl ${bounce === 'airdrop' ? 'bg-gray-50' : ''}`}><span className="circle absolute top-4 left-2.5 w-3 h-3 inline-block rounded-full"></span><span className="font-bold text-20 block leading-6 opacity-70">Airdrop</span><span className="text-14 block opacity-70">1%</span><span className="text-12 block opacity-40">(25,000,000 token)</span></li>
             </ul>
-            <ul className="tokennomics-bounce col-span-2 relative h-330 lg:h-582 order-1 lg:order-2 z-10" onMouseMove={({ clientX: x, clientY: y }) => setPosition({ xy: calc(x, y) })}>
-              <animated.li style={{ transform: position.xy.interpolate(trans1) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/airdrop.png`} alt="airdrop" /></animated.li>
-              <animated.li style={{ transform: position.xy.interpolate(trans2) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/team.png`} alt="team" /></animated.li>
-              <animated.li style={{ transform: position.xy.interpolate(trans3) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/seed_sale.png`} alt="seed_sale" /></animated.li>
-              <animated.li style={{ transform: position.xy.interpolate(trans4) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/presale.png`} alt="presale" /></animated.li>
-              <animated.li style={{ transform: position.xy.interpolate(trans5) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/liquidity.png`} alt="liquidity" /></animated.li>
-              <animated.li style={{ transform: position.xy.interpolate(trans6) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/prevate_sale.png`} alt="prevate_sale" /></animated.li>
-              <animated.li style={{ transform: position.xy.interpolate(trans7) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/partners.png`} alt="partners" /></animated.li>
-              <animated.li style={{ transform: position.xy.interpolate(trans8) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/farming.png`} alt="farming" /></animated.li>
-              <animated.li style={{ transform: position.xy.interpolate(trans9) }} className="absolute"><img src={`${HOME_URL}/assets/tokennomics/fund.png`} alt="fund" /></animated.li>
+            <ul className="tokennomics-bounce col-span-2 relative h-330 lg:h-582 order-1 lg:order-2 z-10">
+              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'airdrop' ? 'scale-110' : ''}`} onMouseLeave={() => setBounce('')} onMouseOver={() => setBounce('airdrop')}><img src={`${HOME_URL}/assets/tokennomics/airdrop.png`} alt="airdrop" /></li>
+              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'team' ? 'scale-110' : ''}`} onMouseLeave={() => setBounce('')} onMouseOver={() => setBounce('team')}><img src={`${HOME_URL}/assets/tokennomics/team.png`} alt="team" /></li>
+              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'seed_sale' ? 'scale-110' : ''}`} onMouseLeave={() => setBounce('')} onMouseOver={() => setBounce('seed_sale')}><img src={`${HOME_URL}/assets/tokennomics/seed_sale.png`} alt="seed_sale" /></li>
+              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'presale' ? 'scale-110' : ''}`} onMouseLeave={() => setBounce('')} onMouseOver={() => setBounce('presale')}><img src={`${HOME_URL}/assets/tokennomics/presale.png`} alt="presale" /></li>
+              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'liquidity' ? 'scale-110' : ''}`} onMouseLeave={() => setBounce('')} onMouseOver={() => setBounce('liquidity')}><img src={`${HOME_URL}/assets/tokennomics/liquidity.png`} alt="liquidity" /></li>
+              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'prevate_sale' ? 'scale-110' : ''}`} onMouseLeave={() => setBounce('')} onMouseOver={() => setBounce('prevate_sale')}><img src={`${HOME_URL}/assets/tokennomics/prevate_sale.png`} alt="prevate_sale" /></li>
+              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'partners' ? 'scale-110' : ''}`} onMouseLeave={() => setBounce('')} onMouseOver={() => setBounce('partners')}><img src={`${HOME_URL}/assets/tokennomics/partners.png`} alt="partners" /></li>
+              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'farming' ? 'scale-110' : ''}`} onMouseLeave={() => setBounce('')} onMouseOver={() => setBounce('farming')}><img src={`${HOME_URL}/assets/tokennomics/farming.png`} alt="farming" /></li>
+              <li className={`absolute cursor-pointer transition-all transform ${bounce === 'fund' ? 'scale-110' : ''}`} onMouseLeave={() => setBounce('')} onMouseOver={() => setBounce('fund')}><img src={`${HOME_URL}/assets/tokennomics/fund.png`} alt="fund" /></li>
             </ul>
             <ul className="col-span-2 lg:col-span-1 order-3">
               <li className="font-bold px-6 lg:px-8 rounded-xl pt-4 pb-3 lg:text-20 text-16 mb-5 bg-gray-50 backdrop-filter backdrop-blur-3xl"><span className="text-12 block text-gray-150 font-normal">TOKEN NAME</span>COR</li>
