@@ -1,12 +1,12 @@
 
 banner.png
-size: 3247,1542
+size: 3218,1542
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 anhsangkinh
   rotate: false
-  xy: 3188, 646
+  xy: 3170, 885
   size: 40, 56
   orig: 40, 56
   offset: 0, 0
@@ -20,28 +20,28 @@ bautroi
   index: -1
 bird arm
   rotate: false
-  xy: 1093, 632
+  xy: 2879, 397
   size: 204, 232
   orig: 204, 232
   offset: 0, 0
   index: -1
 cat
   rotate: false
-  xy: 2886, 898
+  xy: 1071, 222
   size: 358, 642
   orig: 358, 642
   offset: 0, 0
   index: -1
 cat cloak
   rotate: false
-  xy: 2544, 189
+  xy: 2886, 859
   size: 246, 261
   orig: 246, 261
   offset: 0, 0
   index: -1
 cat tail
   rotate: false
-  xy: 501, 66
+  xy: 479, 66
   size: 448, 327
   orig: 448, 327
   offset: 0, 0
@@ -55,7 +55,7 @@ chim
   index: -1
 cho
   rotate: false
-  xy: 93, 121
+  xy: 71, 121
   size: 406, 743
   orig: 406, 743
   offset: 0, 0
@@ -69,17 +69,17 @@ daycung
   index: -1
 dog cape
   rotate: false
-  xy: 951, 175
+  xy: 929, 2
   size: 376, 218
   orig: 376, 218
   offset: 0, 0
   index: -1
 dog cape 2
   rotate: false
-  xy: 2792, 382
-  size: 80, 68
-  orig: 80, 68
-  offset: 0, 0
+  xy: 2879, 631
+  size: 268, 226
+  orig: 269, 226
+  offset: 1, 0
   index: -1
 eyes close
   rotate: false
@@ -90,91 +90,91 @@ eyes close
   index: -1
 eyesL
   rotate: false
-  xy: 3188, 710
+  xy: 3170, 842
   size: 34, 41
   orig: 34, 41
   offset: 0, 0
   index: -1
 eyesR
   rotate: false
-  xy: 3188, 837
+  xy: 3134, 943
   size: 57, 59
   orig: 57, 59
   offset: 0, 0
   index: -1
 giotnuoc
   rotate: false
-  xy: 3188, 753
+  xy: 3134, 859
   size: 34, 82
   orig: 34, 82
   offset: 0, 0
   index: -1
 glow4
   rotate: false
-  xy: 3019, 70
+  xy: 3085, 501
   size: 126, 128
   orig: 126, 128
   offset: 0, 0
   index: -1
 glow5
   rotate: false
-  xy: 2792, 316
+  xy: 3134, 1056
   size: 62, 64
   orig: 62, 64
   offset: 0, 0
   index: -1
 la1
   rotate: false
-  xy: 84, 2
+  xy: 3209, 1414
   size: 7, 32
   orig: 7, 32
   offset: 0, 0
   index: -1
 la2
   rotate: false
-  xy: 3224, 743
+  xy: 3195, 1448
   size: 16, 46
   orig: 16, 46
   offset: 0, 0
   index: -1
 la3
   rotate: false
-  xy: 3224, 791
+  xy: 3195, 1496
   size: 17, 44
   orig: 17, 44
   offset: 0, 0
   index: -1
 la4
   rotate: false
-  xy: 3224, 704
+  xy: 3195, 1409
   size: 12, 37
   orig: 12, 37
   offset: 0, 0
   index: -1
 la5
   rotate: false
-  xy: 73, 5
+  xy: 3195, 1378
   size: 9, 29
   orig: 9, 29
   offset: 0, 0
   index: -1
 magic
   rotate: false
-  xy: 2879, 200
+  xy: 2771, 119
   size: 359, 276
   orig: 359, 276
   offset: 0, 0
   index: -1
 phienda
   rotate: false
-  xy: 2792, 264
+  xy: 3134, 1004
   size: 72, 50
   orig: 74, 52
   offset: 0, 2
   index: -1
 rock dog
   rotate: false
-  xy: 2792, 35
+  xy: 2544, 287
   size: 225, 163
   orig: 225, 163
   offset: 0, 0
@@ -195,14 +195,14 @@ tacke
   index: -1
 taycho
   rotate: false
-  xy: 2879, 478
+  xy: 2886, 1122
   size: 307, 418
   orig: 307, 418
   offset: 0, 0
   index: -1
 thambay
   rotate: false
-  xy: 501, 395
+  xy: 479, 395
   size: 590, 469
   orig: 590, 469
   offset: 0, 0
