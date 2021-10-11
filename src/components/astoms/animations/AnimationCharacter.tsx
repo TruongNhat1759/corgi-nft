@@ -75,7 +75,7 @@ const AnimationCharacter = (props: IProps) => {
         {spineData && (
           <Spine
             scale={sizeScreen > 1023 ? 0.43 : 0.2}
-            x={sizeScreen > 1023 ? 260 : 150}
+            x={sizeScreen > 1023 ? 260 : 170}
             y={sizeScreen > 1023 ? 540 : 280}
             spineData={spineData}
             mixes={mixes}

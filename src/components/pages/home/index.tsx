@@ -71,21 +71,21 @@ const Home: React.FC = () => {
                   <div className="relative max-w-full mx-auto">
                     <img src={`${HOME_URL}/assets/character/character_big.png`} alt="AKITA" className="mx-auto" />
                     <AnimationDomDom link={`${HOME_URL}/assets/animations/domdom/domdom.json`} name="Domdom"></AnimationDomDom> 
-                    <AnimationCharacterSmall link={`${HOME_URL}/assets/animations/Cat/Cat.json`} name="AKITA"></AnimationCharacterSmall>  
+                    <AnimationCharacter link={`${HOME_URL}/assets/animations/Cat/Cat.json`} name="AKITA"></AnimationCharacter>  
                   </div>
                 </li>
                 <li className={`${character === 'dodo' ? 'block' : 'hidden'}`}>
                   <div className="relative max-w-full mx-auto">
                     <img src={`${HOME_URL}/assets/character/character_big.png`} alt="DODO" className="mx-auto" />
                     <AnimationDomDom link={`${HOME_URL}/assets/animations/domdom/domdom.json`} name="Domdom"></AnimationDomDom> 
-                    <AnimationCharacterLarge link={`${HOME_URL}/assets/animations/Shark/Shark.json`} name="Shark"></AnimationCharacterLarge>  
+                    <AnimationCharacter link={`${HOME_URL}/assets/animations/Shark/Shark.json`} name="Shark"></AnimationCharacter>  
                   </div>
                 </li>
                 <li className={`${character === 'eaglato' ? 'block' : 'hidden'}`}>
                   <div className="relative max-w-full mx-auto">
                     <img src={`${HOME_URL}/assets/character/character_big.png`} alt="EAGLATO" className="mx-auto" />
                     <AnimationDomDom link={`${HOME_URL}/assets/animations/domdom/domdom.json`} name="Domdom"></AnimationDomDom> 
-                    <AnimationCharacterLarge link={`${HOME_URL}/assets/animations/Bird/Bird.json`} name="Shark"></AnimationCharacterLarge>  
+                    <AnimationCharacter link={`${HOME_URL}/assets/animations/Bird/Bird.json`} name="Shark"></AnimationCharacter>  
                   </div>
                 </li>
               </ul>
