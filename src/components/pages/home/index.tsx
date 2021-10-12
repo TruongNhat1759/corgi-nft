@@ -5,9 +5,8 @@ import { useSpring, animated } from 'react-spring'
 import AnimationBanner from 'components/astoms/animations/AnimationBanner';
 import AnimationEGG from 'components/astoms/animations/AnimationEGG';
 import AnimationCharacter from 'components/astoms/animations/AnimationCharacter';
-import AnimationCharacterSmall from 'components/astoms/animations/AnimationCharacterSmall';
-import AnimationCharacterLarge from 'components/astoms/animations/AnimationCharacterLarge';
 import AnimationDomDom from 'components/astoms/animations/AnimationDomDom';
+import AnimationDots from 'components/astoms/animations/AnimationDots';
 
 const Home: React.FC = () => {
   const [character, setCharacter] = useState('corgi');
@@ -21,12 +20,29 @@ const Home: React.FC = () => {
             <p className="max-w-600 mx-auto lg:max-w-none"><img src={`${HOME_URL}/assets/main_logo.png`} alt="main_logo" className="mx-auto" /></p>
             <p className="absolute max-w-50 lg:max-w-none bottom-0 lg:bottom-5 left-1/2 transform -translate-x-1/2 cursor-pointer"><img src={`${HOME_URL}/assets/icon_play.svg`} alt="icon_play" /></p>
           </div>
-          <div className="play-app max-w-304 lg:max-w-894 w-full mx-auto mt-12 lg:mt-0 mb-8 lg:mb-10 bg-gray-100 backdrop-filter backdrop-blur-xl rounded-xl py-6 px-8 flex flex-col lg:flex-row justify-between items-center">
+          <div className="play-app max-w-304 lg:max-w-894 w-full mx-auto mt-12 lg:mt-0 mb-8 lg:mb-20 bg-gray-100 backdrop-filter backdrop-blur-xl rounded-xl py-6 px-8 flex flex-col lg:flex-row justify-between items-center">
             <h5 className="mb-4 lg:mb-0 lg:pl-12 text-center lg:text-left"><span className="text-yellow-0 font-bold">AVAiLABLE</span><span className="text-20 lg:text-24 font-bold block leading-5 lg:leading-6">COMING SOON...</span></h5>
             <ul className="flex justify-between flex-col lg:flex-row items-center gap-6">
               <li className="shadow_icon_playgame"><a href="/"><img src={`${HOME_URL}/assets/airdrop/icon_playgame.svg`} alt="icon_playgame" /></a></li>
               <li><a href="/"><img src={`${HOME_URL}/assets/airdrop/icon_chplay.svg`} alt="icon_chplay" /></a></li>
               <li><a href="/"><img src={`${HOME_URL}/assets/airdrop/icon_appstore.svg`} alt="icon_appstore" /></a></li>
+            </ul>
+          </div>
+          <div className='relative'>
+            <p className='text-center break-all text-20 lg:text-30 font-bold text-gray-200 leading-8 lg:leading-10 mb-8'><span className='text-yellow-0 block'>COR address</span>0xf3147987a00d35eecc10c731269003ca093740ca</p>
+            <ul className='flex items-center justify-center gap-4 lg:gap-8 flex-col lg:flex-row'>
+              <li className='block max-w-310 w-full transition-all hover:opacity-80'>
+                <a href="/" target='_blank' className='text-18 lg:text-24 flex gap-4 justify-center items-center font-bold py-3 lg:py-4 rounded-xl bg-blue-100'>
+                  <img src={`${HOME_URL}/assets/icon_chart.svg`} alt="icon_chart" className='w-7 lg:w-auto' />
+                  Live chart
+                </a>
+              </li>
+              <li className='block max-w-310 w-full transition-all hover:opacity-80'>
+                <a href="/" target='_blank' className='text-18 lg:text-24 flex gap-4 justify-center items-center font-bold py-3 lg:py-4 rounded-xl bg-yellow-0'>
+                  <img src={`${HOME_URL}/assets/icon_panake.svg`} alt="icon_panake" className='w-7 lg:w-auto' />
+                  Buy on Pancakeswap
+                </a>
+              </li>
             </ul>
           </div>
           {/* <h2 className="font-bold text-30 lg:text-52 text-center text-shadow mb-4">Join airdrop now</h2>
@@ -241,7 +257,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="tokennomics">
+      <section className="tokennomics relative">
+        <AnimationDots link={`${HOME_URL}/assets/animations/Partical/Partical.json`} name="dots yellow"></AnimationDots>
         <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-8 lg:pt-10">
           <h2 className="font-bold text-30 lg:text-52 text-center mb-16 lg:mb-28 text-shadow">Tokennomics</h2>
           <div className="max-w-375 mx-auto lg:max-w-none grid grid-cols-2 lg:grid-cols-4 gap-6 pb-12 lg:pb-16 items-center">
@@ -276,7 +293,8 @@ const Home: React.FC = () => {
           <p className="h-px lg:h-0.5 bg-linear-gradient"></p>
         </div>
       </section>
-      <section className="roadmap">
+      <section className="roadmap relative">
+        <AnimationDots link={`${HOME_URL}/assets/animations/Partical/Partical.json`} name="dots yellow"></AnimationDots>
         <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-8 lg:py-10 pb-12">
           <h2 className="font-bold text-30 lg:text-52 text-center mb-4 lg:mb-4vw xl:mb-9.5vw text-shadow">Roadmap</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">

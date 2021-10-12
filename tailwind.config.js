@@ -1,10 +1,10 @@
 module.exports = {
   purge: {
-    enabled: true,
-    content: [
-      './src/*.tsx',
-      './src/**/*.tsx',
-    ],
+    // enabled: true,
+    // content: [
+    //   './src/*.tsx',
+    //   './src/**/*.tsx',
+    // ],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -18,6 +18,7 @@ module.exports = {
           '50': 'rgba(255, 255, 255, 0.1)',
           '100': 'rgba(255, 255, 255, 0.2)',
           '150': 'rgba(255, 255, 255, 0.4)',
+          '200': 'rgba(255, 255, 255, 0.5)',
         },
         yellow: {
           '0': '#FF9F0A',
@@ -29,6 +30,7 @@ module.exports = {
           '0': '#131631',
           '50': 'rgba(41, 46, 86, 0.3)',
           '100': '#1561AC',
+          '150': '#1063B0',
         }
       },
       maxWidth: {

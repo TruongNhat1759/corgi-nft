@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useStyles from './styles';
 import { HOME_URL } from 'exports/HOME_URL';
 import { Link } from 'react-router-dom';
@@ -14,10 +14,18 @@ const Footer: React.FC = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
 
-  // console.log(watch("exampleRequired")) // watch input value by passing the name of it
+  const [overScrollToTop, setOverScrollToTop] = useState(false);
+  useEffect(() => {
+    window.onscroll = () => {
+      window.pageYOffset > 100 ? setOverScrollToTop(true) : setOverScrollToTop(false);
+    }
+  }, []);
 
   return (
     <footer>
+      <p className={`fixed bottom-4 right-4 lg:bottom-8 lg:right-8 z-50 cursor-pointer transition-all transform hover:opacity-70 ${overScrollToTop ? '' : 'translate-y-32'}`}
+        onClick={() => window.scrollTo({top: 0, left: 0, behavior: 'smooth' })}
+      ><img src={`${HOME_URL}/assets/totop.svg`} alt="totop" /></p>
       <div className="pt-12 pb-6">
         <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto block lg:grid grid-cols-4 gap-10">
           <div className="col-span-1 mb-8 lg:mb-0">
