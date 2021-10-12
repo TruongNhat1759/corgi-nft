@@ -32,7 +32,7 @@ const Home: React.FC = () => {
             <p className="absolute max-w-50 lg:max-w-none bottom-0 lg:bottom-5 left-1/2 transform -translate-x-1/2 cursor-pointer"><img src={`${HOME_URL}/assets/icon_play.svg`} alt="icon_play" /></p>
           </div>
           <div className="play-app max-w-304 lg:max-w-894 w-full mx-auto mt-12 lg:mt-0 mb-8 lg:mb-20 bg-gray-100 backdrop-filter backdrop-blur-xl rounded-xl py-6 px-8 flex flex-col lg:flex-row justify-between items-center">
-            <h5 className="mb-4 lg:mb-0 lg:pl-12 text-center lg:text-left"><span className="text-yellow-0 font-bold">AVAiLABLE</span><span className="text-20 lg:text-24 font-bold block leading-5 lg:leading-6">COMING SOON...</span></h5>
+            <h5 className="mb-4 lg:mb-0 lg:pl-12 text-center lg:text-left"><span className="text-yellow-0 font-bold uppercase">AVAILABLE</span><span className="text-20 lg:text-24 font-bold block leading-5 lg:leading-6">COMING SOON...</span></h5>
             <ul className="flex justify-between flex-col lg:flex-row items-center gap-6">
               <li className="shadow_icon_playgame"><a href="/"><img src={`${HOME_URL}/assets/airdrop/icon_playgame.svg`} alt="icon_playgame" /></a></li>
               <li><a href="/"><img src={`${HOME_URL}/assets/airdrop/icon_chplay.svg`} alt="icon_chplay" /></a></li>

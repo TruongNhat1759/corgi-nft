@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer>
-      <p className={`fixed bottom-4 right-4 lg:bottom-8 lg:right-8 z-50 cursor-pointer transition-all transform hover:opacity-70 ${overScrollToTop ? '' : 'translate-y-32'}`}
+      <p className={`fixed bottom-4 right-4 lg:bottom-8 lg:right-8 z-10 cursor-pointer transition-all transform hover:opacity-70 ${overScrollToTop ? '' : 'translate-y-32'}`}
         onClick={() => window.scrollTo({top: 0, left: 0, behavior: 'smooth' })}
       ><img src={`${HOME_URL}/assets/totop.svg`} alt="totop" /></p>
       <div className="pt-12 pb-6">
