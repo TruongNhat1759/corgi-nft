@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HOME_URL } from 'exports/HOME_URL';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring'
@@ -11,6 +11,17 @@ import AnimationDots from 'components/astoms/animations/AnimationDots';
 const Home: React.FC = () => {
   const [character, setCharacter] = useState('corgi');
   const [bounce, setBounce] = useState('');
+  const address = '0xf3147987a00d35eecc10c731269003ca093740ca';
+  const [isCopy, setIsCopy] = useState(false);
+  const copyToClipBoard = (event: React.MouseEvent) => {
+    navigator.clipboard.writeText(address);
+    setIsCopy(true);
+  }
+  useEffect(() => {
+    setTimeout(() => {
+      setIsCopy(false)
+    }, 1500)
+  }, [isCopy])
   return (
     <>
       <section className="banner pt-30vw lg:pt-35vw relative lg:mb-36 mt-67 lg:mt-0">
@@ -29,7 +40,16 @@ const Home: React.FC = () => {
             </ul>
           </div>
           <div className='relative'>
-            <p className='text-center break-all text-20 lg:text-30 font-bold text-gray-200 leading-8 lg:leading-10 mb-8'><span className='text-yellow-0 block'>COR address</span>0xf3147987a00d35eecc10c731269003ca093740ca</p>
+            <div className='text-center break-all text-20 lg:text-30 font-bold text-gray-200 leading-8 lg:leading-10 mb-8'>
+              <p className='text-yellow-0 block mb-2 lg:mb-4'>COR address</p>
+              <p>
+                {address}
+                <span className='relative ml-2 lg:ml-4 leading-8'>
+                  <span className='cursor-pointer w-4 lg:w-6 inline-block' onClick={(event) => {copyToClipBoard(event)}}><img src={`${HOME_URL}/assets/copy.svg`} alt="copy" /></span>
+                  <span className={`inline-block text-12 bg-yellow-0 absolute rounded transition-all -left-5 w-16 text-white uppercase leading-6 ${isCopy ? 'top-full opacity-100' : '-top-4 opacity-0'}`}>Copied</span>
+                </span>
+              </p>
+            </div>
             <ul className='flex items-center justify-center gap-4 lg:gap-8 flex-col lg:flex-row'>
               <li className='block max-w-310 w-full transition-all hover:opacity-80'>
                 <a href="/" target='_blank' className='text-18 lg:text-24 flex gap-4 justify-center items-center font-bold py-3 lg:py-4 rounded-xl bg-blue-100'>

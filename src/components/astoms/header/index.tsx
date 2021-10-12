@@ -34,14 +34,14 @@ const Header: React.FC = () => {
           </p>
           <div className={`block lg:hidden menu-toggle bg-blue-0 p-3/100 pt-8 overflow-y-auto ${toggleMenu ? 'active' : ''}`}>
             <ul>
-              <li className={`font-bold leading-4 uppercase text-right text-16 mb-10 ${pathName === '/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Home</Link></li>
-              <li className={`font-bold leading-4 uppercase text-right text-16 mb-10 ${pathName === '/airdrop/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Airdrop</Link></li>
-              <li className={`font-bold leading-4 uppercase text-right text-16 mb-10 ${pathName === '/cor-farmer/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Cor Farmer</Link></li>
-              <li className={`font-bold leading-4 uppercase text-right text-16 mb-10 ${pathName === '/nft-market/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>NFT Market</Link></li>
-              <li className={`font-bold leading-4 uppercase text-right text-16 mb-10 ${pathName === '/whitepaper/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Whitepaper</Link></li>
-              <li className={`font-bold leading-4 uppercase text-right text-16 mb-10 ${pathName === '/faqs/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>FAQS</Link></li>
-              <li className={`font-bold leading-4 uppercase text-right text-16 mb-10 ${pathName === '/community/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Community</Link></li>
-              <li className={`font-bold leading-4 uppercase text-right text-16 mb-10 ${pathName === '/cor-team/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Cor Team</Link></li>
+              <li className={`font-bold leading-4 uppercase text-center text-16 mb-10 ${pathName === '/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Home</Link></li>
+              <li className={`font-bold leading-4 uppercase text-center text-16 mb-10 ${pathName === '/airdrop/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Airdrop</Link></li>
+              <li className={`font-bold leading-4 uppercase text-center text-16 mb-10 ${pathName === '/cor-farmer/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Cor Farmer</Link></li>
+              <li className={`font-bold leading-4 uppercase text-center text-16 mb-10 ${pathName === '/nft-market/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>NFT Market</Link></li>
+              <li className={`font-bold leading-4 uppercase text-center text-16 mb-10 ${pathName === '/whitepaper/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Whitepaper</Link></li>
+              <li className={`font-bold leading-4 uppercase text-center text-16 mb-10 ${pathName === '/faqs/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>FAQS</Link></li>
+              <li className={`font-bold leading-4 uppercase text-center text-16 mb-10 ${pathName === '/community/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Community</Link></li>
+              <li className={`font-bold leading-4 uppercase text-center text-16 mb-10 ${pathName === '/cor-team/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Cor Team</Link></li>
             </ul>
             <p className="bg-yellow-0 font-bold px-4 py-1.5 rounded-lg cursor-pointer w-max ml-auto">Connect Wallet</p>
           </div>
