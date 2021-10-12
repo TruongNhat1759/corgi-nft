@@ -158,6 +158,20 @@ header {
   box-shadow: 0 6px 10px -5px rgb(0, 0, 0, 0.6);
 }
 
+.menu-toggle {
+  position: fixed;
+  top: 67px;
+  left: 100%;
+  transition: all 0.2s ease;
+  height: calc(100% - 67px);
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu-toggle.active {
+  left: 0;
+}
+
 
 @media screen and (max-width: 1023px) {
 

@@ -90,7 +90,7 @@ const AnimationBanner = (props: IProps) => {
           <Spine
             scale={size.width / 1400}
             x={size.width / 2}
-            y={size.width / 2 - 15}
+            y={size.width / 2 - 20}
             spineData={spineData}
             mixes={mixes}
             animationStateCallback={stateRef}

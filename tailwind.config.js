@@ -1,10 +1,10 @@
 module.exports = {
   purge: {
-    // enabled: true,
-    // content: [
-    //   './src/*.tsx',
-    //   './src/**/*.tsx',
-    // ],
+    enabled: true,
+    content: [
+      './src/*.tsx',
+      './src/**/*.tsx',
+    ],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -91,6 +91,7 @@ module.exports = {
         '8vw': '8vw',
         '9.5vw': '9.5vw',
         '31vw': '31vw',
+        '67': '67px',
         
       },
       screens: {
@@ -98,6 +99,9 @@ module.exports = {
       },
       zIndex: {
         '-1': '-1',
+      },
+      inset: {
+        '8px': '8px',
       }
     },
   },

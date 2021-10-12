@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   const [bounce, setBounce] = useState('');
   return (
     <>
-      <section className="banner pt-30vw lg:pt-35vw relative lg:mb-36">
+      <section className="banner pt-30vw lg:pt-35vw relative lg:mb-36 mt-67 lg:mt-0">
         <AnimationBanner link={`${HOME_URL}/assets/animations/banner/banner.json`} name="banner"></AnimationBanner>
         <div className="px-3/100 screen1360:px-0 max-w-1360 mx-auto pt-10 pb-12 lg:pb-32 w-full">
           <div className="relative mb-4">
