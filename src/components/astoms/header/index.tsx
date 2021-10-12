@@ -43,7 +43,7 @@ const Header: React.FC = () => {
               <li className={`font-bold leading-4 uppercase text-center text-16 mb-10 ${pathName === '/community/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Community</Link></li>
               <li className={`font-bold leading-4 uppercase text-center text-16 mb-10 ${pathName === '/cor-team/' ? 'text-yellow-0' : ''}`}><Link to="/" className='block'>Cor Team</Link></li>
             </ul>
-            <p className="bg-yellow-0 font-bold px-4 py-1.5 rounded-lg cursor-pointer w-max ml-auto">Connect Wallet</p>
+            <p className="bg-yellow-0 font-bold px-4 py-1.5 rounded-lg cursor-pointer w-max mx-auto">Connect Wallet</p>
           </div>
       </div>
       <p className="hidden lg:block absolute top-8 xl:top-0 left-1/2 transform -translate-x-1/2 max-w-120 xl:max-w-194"><Link to="/"><img src={`${HOME_URL}/assets/logo.png`} alt="logo" /></Link></p>
