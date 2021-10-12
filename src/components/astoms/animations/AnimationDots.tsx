@@ -88,7 +88,7 @@ const AnimationDots = (props: IProps) => {
       >
         {spineData && (
           <Spine
-            scale={size.width / 1400}
+            scale={size.width > 1024 ? size.width / 1920 : size.width / 1500}
             x={size.width / 2}
             y={size.width / 2 - 15}
             spineData={spineData}
